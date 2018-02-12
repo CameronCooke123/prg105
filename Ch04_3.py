@@ -17,7 +17,8 @@ def convert_variable_to_int(variable):
         return -math.inf
 
 
-def get_int_input_greater_than_value(input_text, value):
+# this function will return an integer greater than or equal to value
+def get_int_input_greater_equal_to_value(input_text, value):
     while True:
         variable = input(input_text)
         variable = convert_variable_to_int(variable)
@@ -32,12 +33,12 @@ def get_int_input_greater_than_value(input_text, value):
 months = ["January", "February", "March", "April", "May", "June",
           "July", "August", "September", "October", "November", "December"]
 total_rain_fall = 0
-number_of_years = get_int_input_greater_than_value("How many years do you have data for?: ", 1)
+number_of_years = get_int_input_greater_equal_to_value("How many years do you have data for?: ", 1)
 
 for year in range(0, number_of_years):
     for month in range(0, 12):
         inches_fell_text = str("How many inches of rain fell in " + months[month] + " of year " + str(year + 1) + "?: ")
-        inches_of_rain_this_month = get_int_input_greater_than_value(inches_fell_text, 0)
+        inches_of_rain_this_month = get_int_input_greater_equal_to_value(inches_fell_text, 0)
         total_rain_fall += inches_of_rain_this_month
 
 number_of_months = number_of_years * 12
