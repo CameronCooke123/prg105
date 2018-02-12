@@ -17,7 +17,7 @@ def convert_variable_to_int(variable):
         return -math.inf
 
 
-# this function will return an integer greater than or equal to value
+# this function returns input that is an integer greater than or equal to value
 def get_int_input_greater_equal_to_value(input_text, value):
     while True:
         variable = input(input_text)
