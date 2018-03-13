@@ -35,6 +35,9 @@ def read_files():
 		line = girl_file.readline()
 		line = line.strip("\n")
 
+	boy_file.close()
+	girl_file.close()
+
 	return boys_names, girls_names
 
 
